@@ -55,7 +55,7 @@
     "tough-cookie": "^2.5.0",
     "ts-custom-error": "^2.2.2",
     "ts-xor": "^1.0.6",
-    "url-regex": "^5.0.0",
+    "url-regex": "https://github.com/niftylettuce/url-regex-safe.git",
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
