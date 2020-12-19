@@ -107,9 +107,11 @@ export class Request {
   }
 
   public signature(data: string) {
-    return createHmac('sha256', this.client.state.signatureKey)
-      .update(data)
-      .digest('hex');
+    if (this.client.state.signatureKey == 'SIGNATURE') return this.client.state.signatureKey;
+    else
+      return createHmac('sha256', this.client.state.signatureKey)
+        .update(data)
+        .digest('hex');
   }
 
   public sign(payload: Payload): SignedPost {
